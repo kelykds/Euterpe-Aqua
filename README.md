@@ -1,6 +1,6 @@
 # Euterpe-Aqua 
 
-Ecossistema tecnológico voltado ao reaproveitamento sustentável do caroço de açaí (*Euterpe oleracea*) para extração de taninos condensados, aplicados como coagulantes naturais no tratamento de águas e efluentes de mineração.
+Ecossistema tecnológico voltado ao reaproveitamento sustentável do caroço de açaí para extração de taninos condensados, aplicados como coagulantes naturais no tratamento de águas e efluentes de mineração.
 
 > Projeto submetido às competições **Solve For Tomorrow Brasil** e **FECITIS-PARÁ**, integrando hardware de baixo custo e economia solidária.
 
