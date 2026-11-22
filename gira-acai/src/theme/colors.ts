@@ -1,0 +1,15 @@
+export const colors = {
+  amareloFundo: '#F6BE1A',
+  roxoPrincipal: '#3E236E',
+  roxoEscuroTexto: '#361D63',
+  lilasInput: '#E4B8D8',
+  lilasTextoPlaceholder: '#8E6285',
+  branco: '#FFFFFF',
+  sucesso: '#4ADE80',
+  erro: '#F87171',
+  batedorFundop: '#442F73',
+  amareloEscuro: '#F2AB13',
+  agricultorFundo: '#8C5830',
+  agricultorSecundario: '#5C3A43',
+  parceiroFundo: '#1E1E1E',
+};

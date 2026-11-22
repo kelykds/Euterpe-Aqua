@@ -1,4 +1,4 @@
-export type TipoUsuario = 'batedor' | 'cooperativa' | 'parceiro';
+export type TipoUsuario = 'batedor' | 'cooperativa' |'agricultor' | 'parceiro';
 export type StatusLote = 'disponivel' | 'em_coleta' | 'processado';
 export type TipoDesconto = 'porcentagem' | 'valor_fixo';
 
