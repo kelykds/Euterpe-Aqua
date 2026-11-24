@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import { Animated, StyleSheet, Text, View } from 'react-native';
 import { colors } from '../theme/colors';
-import Gira from '../assets/logogiraamarelo.svg'
+import { Image } from 'expo-image';
+import Gira from '../../assets/logogiraamarelo.svg'
 
 // Se já tiver o logo em SVG ou PNG, importe aqui:
 // import LogoGiraAmarelo from '../assets/logo-gira-amarelo.svg';
@@ -31,7 +32,11 @@ export function LoadingScreen() {
   return (
     <View style={styles.container}>
       <Animated.View style={[styles.logoBox, { transform: [{ scale: pulso }] }]}>
-        <Gira width={180} height={160} />        
+        <Image
+          source={require('../../assets/logogiraamarelo.svg')}
+          style={{ width: 180, height: 160 }}
+          contentFit="contain"
+        />     
       </Animated.View>
     </View>
   );

@@ -2,7 +2,6 @@ import { Ionicons } from '@expo/vector-icons';
 import React, { useState } from 'react';
 import {
   ActivityIndicator,
-  Image,
   KeyboardAvoidingView,
   Platform,
   ScrollView,
@@ -20,8 +19,7 @@ import {
 } from '../services/authServices';
 import { colors } from '../theme/colors';
 import { Perfil, TipoUsuario } from '../types/database';
-import LogoGira from '../assets/logogiraroxo.svg';
-import Euterpe from '../assets/logoeuterperoxo.svg';
+import { Image } from 'expo-image';
 
 interface AuthScreenProps {
   onLoginSucesso: (perfil: Perfil) => void;
@@ -158,7 +156,11 @@ export function AuthScreen({ onLoginSucesso }: AuthScreenProps) {
         <Image source={require('../../assets/acaiamarelopattern.png')}/>
         <Text style={styles.sejaBemVindo}>Seja bem-vindo(a)!</Text>
 
-        <LogoGira width={180} height={150} />
+        <Image
+          source={require('../../assets/logogiraroxo.svg')}
+          style={{ width: 200, height: 200 }}
+          contentFit="contain"
+        />
         
 
         <View style={styles.inicioBotoes}>
@@ -184,7 +186,11 @@ export function AuthScreen({ onLoginSucesso }: AuthScreenProps) {
           </TouchableOpacity>
         </View>
 
-        <Euterpe width={180} height={150} />
+        <Image
+          source={require('../../assets/logoeuterperoxo.svg')}
+          style={{ width: 160, height: 60 }}
+          contentFit="contain"
+        />
 
         <CustomAlert
           visivel={aviso.visivel}
@@ -430,7 +436,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 32,
   },
   sejaBemVindo: {
-    fontSize: 13,
+    fontSize: 18,
     color: colors.roxoEscuroTexto,
     marginTop: 20,
   },
