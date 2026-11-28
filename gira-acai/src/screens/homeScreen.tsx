@@ -53,17 +53,9 @@ export function HomeScreen({ perfil, onLogout }: HomeScreenProps) {
       {/* TOPO COM LOGO E SINO */}
       <View style={styles.header}>
         <HeaderC
-        tema={tema}
-        onPressDireita={onLogout}
-        acessibilidadeDireita="Notificações e sair"
+          tema={tema}
+          onPressNotificacoes={() => console.log('Abrir notificações')}
         />
-
-        <TouchableOpacity
-          style={[styles.botaoSino, { backgroundColor: tema.corSecundaria }]}
-          onPress={onLogout} // Temporário ######
-        >
-          <Text style={[styles.sinoTexto, { color: tema.textoSobreSecundaria }]}>🔔</Text>
-        </TouchableOpacity>
       </View>
 
       {/* CARD DE PONTOS (BATEDOR / EXTRATOR) */}

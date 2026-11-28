@@ -1,13 +1,9 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import { Image } from 'expo-image';
 import { Ionicons } from '@expo/vector-icons';
 import { TemaPerfil } from '../theme/perfisTheme';
 
-/**
- * ESPAÇO PARA OS LOGOS EM SVG DO APP
- * Ajuste o caminho e o nome dos arquivos conforme estiverem na sua pasta `assets/`.
- */
 const LOGOS_SVGS = {
   amarelo: require('../../assets/logogiraamareloside.svg'),
   roxo: require('../../assets/logogiraroxoside.svg'),
@@ -15,48 +11,24 @@ const LOGOS_SVGS = {
 
 interface HeaderCProps {
   tema: TemaPerfil;
-  onPressDireita: () => void;
-  acessibilidadeDireita?: string;
-  /** Opcional: exibe um botão esquerdo (ex.: "← Voltar" ou "← Sair") */
-  textoEsquerda?: string;
-  onPressEsquerda?: () => void;
+  onPressNotificacoes?: () => void;
 }
 
-export function HeaderC({
-  tema,
-  onPressDireita,
-  acessibilidadeDireita = 'Notificações',
-  textoEsquerda,
-  onPressEsquerda,
-}: HeaderCProps) {
+export function HeaderC({ tema, onPressNotificacoes }: HeaderCProps) {
   return (
     <View style={[styles.container, { backgroundColor: tema.fundoTopo }]}>
-      {textoEsquerda && onPressEsquerda && (
-        <TouchableOpacity
-          activeOpacity={0.8}
-          onPress={onPressEsquerda}
-          style={styles.botaoEsquerda}
-        >
-          <Text style={[styles.textoEsquerda, { color: tema.textoTopo }]}>
-            {textoEsquerda}
-          </Text>
-        </TouchableOpacity>
-      )}
-
       <View style={styles.linhaPrincipal}>
-        {/* LOGO SVG (renderizado com expo-image) */}
         <Image
           source={LOGOS_SVGS[tema.logoHeader]}
           style={styles.logo}
           contentFit="contain"
         />
 
-        {/* BOTÃO DIREITO (SINO VETORIAL) */}
         <TouchableOpacity
           activeOpacity={0.85}
-          onPress={onPressDireita}
-          accessibilityLabel={acessibilidadeDireita}
-          style={[styles.botaoDireita, { backgroundColor: tema.corSecundaria }]}
+          onPress={onPressNotificacoes}
+          accessibilityLabel="Notificações"
+          style={[styles.botaoNotificacao, { backgroundColor: tema.corSecundaria }]}
         >
           <Ionicons
             name="notifications-outline"
@@ -71,32 +43,25 @@ export function HeaderC({
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 46,
-    paddingBottom: 14,
-  },
-  botaoEsquerda: {
-    paddingHorizontal: 22,
-    marginBottom: 8,
-    alignSelf: 'flex-start',
-  },
-  textoEsquerda: {
-    fontSize: 13,
-    fontWeight: '700',
+    width: '100%',
+    paddingTop: 50,
+    paddingBottom: 18,
   },
   linhaPrincipal: {
+    width: '100%',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingHorizontal: 22,
+    paddingHorizontal: 24,
   },
   logo: {
-    width: 155,
-    height: 44,
+    width: 168,
+    height: 46,
   },
-  botaoDireita: {
-    width: 42,
-    height: 42,
-    borderRadius: 12,
+  botaoNotificacao: {
+    width: 44,
+    height: 44,
+    borderRadius: 13,
     alignItems: 'center',
     justifyContent: 'center',
   },
