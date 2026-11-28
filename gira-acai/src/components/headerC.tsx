@@ -9,8 +9,8 @@ import { TemaPerfil } from '../theme/perfisTheme';
  * Ajuste o caminho e o nome dos arquivos conforme estiverem na sua pasta `assets/`.
  */
 const LOGOS_SVGS = {
-  amarelo: require('../../assets/logogiraamarelo.svg'),
-  roxo: require('../../assets/logogiraroxo.svg'),
+  amarelo: require('../../assets/logogiraamareloside.svg'),
+  roxo: require('../../assets/logogiraroxoside.svg'),
 };
 
 interface HeaderCProps {

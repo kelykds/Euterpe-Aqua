@@ -76,7 +76,7 @@ export function HomeScreen({ perfil, onLogout }: HomeScreenProps) {
             Seus pontos
           </Text>
           <Text style={[styles.valorPontos, { color: tema.textoSobreSecundaria }]}>
-            {perfil.pontos_gira.toLocaleString('pt-BR')} pts
+            {(perfil.pontos_gira ?? 0).toLocaleString('pt-BR')} pts
           </Text>
         </View>
 

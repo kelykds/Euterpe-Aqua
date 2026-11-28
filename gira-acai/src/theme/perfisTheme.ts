@@ -17,9 +17,9 @@ export const TEMAS_PERFIL: Record<TipoUsuario, TemaPerfil> = {
   batedor: {
     rotulo: 'Batedor(a) de Açaí',
     abaDireita: 'Loja',
-    fundoTopo: '#3B1C5A', 
+    fundoTopo: '#442F73', 
     textoTopo: '#FFFFFF',
-    corPrimaria: '#3B1C5A',
+    corPrimaria: '#442F73',
     corSecundaria: '#F2BB13', 
     textoSobrePrimaria: '#FFFFFF',
     textoSobreSecundaria: '#3B1C5A',
